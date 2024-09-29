@@ -1,0 +1,30 @@
+$GAP: 10px;
+$SIZE: 56px;
+
+.gameBoard {
+    display: grid;
+    padding: 10px;
+    grid-gap: $GAP;
+    grid-template-rows: repeat(6, auto);
+    box-sizing: border-box;
+}
+
+.gameRow {
+    display: grid;
+    grid-gap: $GAP;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+}
+
+.gameCell {
+    width: $SIZE;
+    height: $SIZE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #FFF;
+    transition: background-color 0.3s;
+}

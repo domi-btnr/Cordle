@@ -1,0 +1,31 @@
+$SIZE: 56px;
+$KEYS_PER_ROW: 5;
+
+.keyboard {
+    display: grid;
+    padding: 10px;
+    gap: 5px;
+    grid-template-columns: repeat($KEYS_PER_ROW, auto);
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.key {
+    width: $SIZE;
+    height: $SIZE;
+    display: flex;
+    cursor: pointer;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: transform 0.2s;
+    user-select: none;
+    line-height: 0;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
